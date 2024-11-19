@@ -1,0 +1,11 @@
+package default_1;
+
+public class PrimeNumber {
+
+	public static void main(String[] args) {
+
+        int number = 13; // Example number to check for prime
+        boolean isPrime = true;
+        }
+
+}

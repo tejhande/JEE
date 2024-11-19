@@ -1,0 +1,66 @@
+# Ignore IDE and editor settings
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+*.vs/
+*.eclipse/
+
+# Ignore system files
+.DS_Store        # macOS Finder metadata
+Thumbs.db         # Windows thumbnail cache
+ehthumbs.db       # Windows thumbnail cache
+Desktop.ini       # Windows desktop settings
+
+# Ignore version control metadata
+.git/
+.gitmodules
+.hg/
+.svn/
+.bzr/
+.fslckout/
+
+# Ignore package manager metadata
+node_modules/    # npm/Yarn packages
+bower_components/  # Bower package manager metadata
+package-lock.json  # npm package lock file
+yarn.lock          # Yarn package lock file
+
+# Ignore build system metadata
+build/
+dist/
+out/
+target/
+release/
+debug/
+
+# Ignore temporary and backup files
+*.swp            # vim swap files
+*.swo            # vim swap files
+*.bak            # backup files
+*.tmp            # temporary files
+*.orig           # merge resolution files
+
+# Ignore environment variable files (can contain sensitive data)
+.env
+.env.local
+.env.production
+.env.staging
+.env.testing
+
+# Ignore coverage reports and test artifacts
+coverage/
+*.lcov
+*.nyc_output/
+*.istanbul.yml
+
+# Ignore other specific tool metadata
+*.iml            # IntelliJ IDEA project files
+*.ipr            # IntelliJ IDEA project files
+*.iws            # IntelliJ IDEA workspace files
+*.sln            # Visual Studio solution files
+*.csproj         # Visual Studio C# project files
+*.vbproj         # Visual Studio VB.NET project files
+
+# Ignore cache files
+.cache/

@@ -1,0 +1,36 @@
+package default_1;
+
+public class PrimeNumber {
+
+	public static boolean isPrime(int num) {
+		if (num <= 1) {
+			return false;
+		}
+		for (int i = 2; i < Math.sqrt(num); i++) {
+			if (num % i == 0) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public static void main(String[] args) {
+
+//		Scanner mScanner = new Scanner(System.in);
+//		int num = mScanner.nextInt();
+//
+//		if (isPrime(num)) {
+//			System.out.println(num + " is not prime");
+//		} else {
+//			System.out.println(num + " is prime");
+//		}
+
+		for (int i = 0; i < 100; i++) {
+			if (isPrime(i)) {
+				System.out.println(i);
+			}
+		}
+
+	}
+
+}

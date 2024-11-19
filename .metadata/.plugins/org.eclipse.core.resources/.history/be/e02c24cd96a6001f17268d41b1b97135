@@ -1,0 +1,31 @@
+package default_1;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class CRUD {
+
+	public void insertData() throws ClassNotFoundException, SQLException {
+		// Register JDBC driver
+		Class.forName("com.mysql.cj.jdbc.Driver");
+
+		// Establish connection to the MySQL database
+		Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/tejas", "root", "AartiInd@544");
+
+		// Create a statement object to execute queries
+		Statement s = c.createStatement();
+
+		// Insert data into the students table
+		s.executeUpdate("INSERT INTO students VALUES(1, 'Mauli')");
+
+		// Print success message
+		System.out.println("Data inserted successfully.");
+
+	}
+
+	public void update() {
+
+	}
+}

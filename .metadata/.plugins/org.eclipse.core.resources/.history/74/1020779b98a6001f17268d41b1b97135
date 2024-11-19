@@ -1,0 +1,63 @@
+package default_1;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class CRUD {
+
+	private static final String JDBC_URL = "jdbc:mysql://localhost:3306/tejas";
+	private static final String DB_USER = "root";
+	private static final String DB_PASSWORD = "AartiInd@544";
+
+	// Method to establish a connection
+	private Connection getConnection() throws SQLException {
+		return DriverManager.getConnection(JDBC_URL, DB_USER, DB_PASSWORD);
+	}
+
+	public void insertData() throws SQLException {
+		try (Connection c = getConnection(); Statement s = c.createStatement()) {
+			s.executeUpdate("INSERT INTO students (id, name) VALUES (1, 'Mauli')");
+			System.out.println("Data inserted successfully.");
+		}
+	}
+
+	public void updateData() throws SQLException {
+		try (Connection c = getConnection(); Statement s = c.createStatement()) {
+			s.executeUpdate("UPDATE students SET name='Maulik' WHERE id=1");
+			System.out.println("Data updated successfully.");
+		}
+	}
+
+	public void deleteData() throws SQLException {
+		try (Connection c = getConnection(); Statement s = c.createStatement()) {
+			s.executeUpdate("DELETE FROM students WHERE id=1");
+			System.out.println("Data deleted successfully.");
+		}
+	}
+
+	public void fetchData() throws SQLException {
+		try (Connection c = getConnection();
+				Statement s = c.createStatement();
+				ResultSet rs = s.executeQuery("SELECT * FROM students")) {
+			while (rs.next()) {
+				System.out.println(rs.getInt("id") + " - " + rs.getString("name"));
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+		CRUD crud = new CRUD();
+		try {
+			crud.insertData();
+			crud.updateData();
+			crud.deleteData();
+			crud.fetchData();
+		} catch (SQLException e) {
+			System.out.println("SQL Error: " + e.getMessage());
+			e.printStackTrace();
+		}
+	}
+}

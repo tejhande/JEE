@@ -1,0 +1,23 @@
+package default_1;
+
+public class PrimeNumber {
+
+	public static void main(String[] args) {
+
+		
+		int n = 37;
+		
+		boolean isPrime = true;
+		
+		if (n>=2) {
+			isPrime = false;
+			for (int i =2 ; i>=Math.sqrt(n); i++) {
+				if (i) {
+					
+				}
+			}
+		}
+        
+	}
+
+}
