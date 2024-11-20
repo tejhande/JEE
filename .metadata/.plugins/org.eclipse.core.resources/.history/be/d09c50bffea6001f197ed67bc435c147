@@ -103,7 +103,7 @@ public class CRUD_Scanner {
 		System.out.println("2- Update Data");
 		System.out.println("3- Delete Data");
 		System.out.println("4- Fetch Data");
-		System.out.println("Wrong Input will exit and ");
+		System.out.println("Wrong Input will exit and fetch data");
 
 		int userInput = mScanner.nextInt();
 		switch (userInput) {
