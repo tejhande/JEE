@@ -51,6 +51,7 @@ debug/
 # Ignore coverage reports and test artifacts
 coverage/
 *.lcov
+*.log
 *.nyc_output/
 *.istanbul.yml
 
@@ -64,3 +65,4 @@ coverage/
 
 # Ignore cache files
 .cache/
+/.metadata/
