@@ -23,7 +23,7 @@ public class CRUD {
 	public void insertData() throws SQLException {
 		Connection c = getConnection();
 		Statement s = c.createStatement();
-		s.executeUpdate("INSERT INTO students (id, name) VALUES (1, 'Mauli')");
+		s.executeUpdate("INSERT INTO students (id, name) VALUES (1, 'Tejas')");
 		System.out.println("Data inserted successfully.");
 		s.close();
 		c.close();
