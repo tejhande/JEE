@@ -10,7 +10,7 @@ public class Student_dao {
 		Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/tejas?useSSL=false", "root",
 				"AartiInd@544");
 		Statement s = c.createStatement();
-		s.executeUpdate("insert into students values(5,'Dnyana',16)");
+		s.executeUpdate("insert into students values(5,'Tejas',16)");
 		System.out.println("dao");
 		c.close();
 	}
